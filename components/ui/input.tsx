@@ -1,6 +1,6 @@
-import * as React from "react"
+// components/ui/input.tsx
+import * as React from "react";
 
-// Assuming the supertype is React.HTMLProps<HTMLInputElement>
 const Input: React.FC<React.HTMLProps<HTMLInputElement>> = (props) => {
   return <input {...props} />;
 };
