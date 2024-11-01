@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import {TypeAnimation} from "react-type-animation";
 import "./style.css";
+import ColorButton from "@/app/home/components/ColorButton";
 
 export default function HeroSection() {
   return (
@@ -10,14 +11,16 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12">
           <div className="lg:col-span-7 md:col-span-3">
               <div>
-                  <h1 className="lg:text-6xl text-4xl">Hello, It&#39;s
+                  <h1 className="lg:text-6xl text-4xl text-white">Hello, It&#39;s
                       <span
                           className="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600"> Will</span>
                   </h1>
                   <h1 className="text-xl lg:text-2xl font-bold  pb-5 ">
                       <span
                           className="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600"> I&#39;m {" "} </span>
-                      <TypeAnimation sequence={[
+                      <TypeAnimation
+                          className="text-white"
+                          sequence={[
                           ' a Software Engineer',
                           3000, // wait 3s before replacing
                           ' a Web Developer',
@@ -36,13 +39,8 @@ export default function HeroSection() {
                       in a professional environment where I can actively contribute to the company&#39;s objectives.</p>
               </div>
               <div className="flex flex-col md:flex-row lg:flex-row pt-5">
-                  <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 mb-2 lg:mb-0 bg-white
-                  bg-gradient-to-br from-blue-800 via-blue-500 to-purple-600 hover:font-bold
-                  ">Hire Me</button>
-                  <button className="px-1 py-1 w-full sm:w-fit rounded-full
-                  bg-gradient-to-br from-blue-800 via-blue-500 to-purple-600
-                  "> <span className="block px-4 py-3 bg-black w-full rounded-full">Download CV</span>
-                  </button>
+                  <ColorButton name="Contact Me"/>
+                  <ColorButton name="Download CV"/>
               </div>
           </div>
           <div className="lg:col-span-5 md:col-span-3 pt-10 lg:pt-0 p-2">
